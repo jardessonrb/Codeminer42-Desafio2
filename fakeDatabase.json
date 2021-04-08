@@ -1,0 +1,17 @@
+{
+  "exercises": [],
+  "typeExercise": [
+    {
+      "id": 0,
+      "name_type": "Run"
+    },
+    {
+      "id": 1,
+      "name_type": "Swimming"
+    },
+    {
+      "id": 3,
+      "name_type": "Bike"
+    }
+  ]
+}

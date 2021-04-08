@@ -1,0 +1,30 @@
+
+
+.container-item-exercise{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 0.5px solid var(--gray-light);
+    padding: 0.5rem;
+    padding-right: 1rem;
+    height: 4.2rem;
+}
+
+.container-item-exercise span{
+    font-size: 1.5rem;
+    flex: 1;
+}
+
+.container-item-exercise button{
+    width: 4rem;
+    height: 2.5rem;
+    cursor: pointer;
+    border: none;
+    background: var(--red-light);
+}
+
+.icon{
+    color: (--white);
+}

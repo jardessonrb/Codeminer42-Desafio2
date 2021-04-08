@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: #ffffff;
+    --orange: #fc6625;
+    --gray-light: #8f9491;
+    --gray-dark: #474747;
+    --black: #000000;
+    --space-empty: rgb(241, 238, 238);
+    --green: #129b4f;
+    --green-dark: #0c8040;
+    --red-light: #bd312dd2;
+}
+
+body{
+    background: var(--space-empty);
+}
+
+html{
+    font-size: 65.5%;
+}
+
+legend{
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 860){
+    .container-content .content-header{
+        width: 80vw;
+    }
+}
