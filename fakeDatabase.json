@@ -1,5 +1,18 @@
 {
-  "exercises": [],
+  "exercises": [
+    {
+      "type_exercise": "Swimming",
+      "duration": 0.5,
+      "date_exercise": "2021-04-04",
+      "id": 5
+    },
+    {
+      "type_exercise": "Run",
+      "duration": 1,
+      "date_exercise": "2021-04-08",
+      "id": 7
+    }
+  ],
   "typeExercise": [
     {
       "id": 0,
@@ -10,8 +23,12 @@
       "name_type": "Swimming"
     },
     {
-      "id": 3,
+      "id": 2,
       "name_type": "Bike"
+    },
+    {
+      "id": 3,
+      "name_type": "Walk"
     }
   ]
 }

@@ -1,35 +1,44 @@
-.container-content{
+.container-general{
     width: 100vw;
     height: 100vh;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.container-content .content-header{
-    width: 50%;
+.container-general h1{
+    text-align: center;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 3rem;
+}
+.container-general .container-content{
+    width: 60%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-
 }
-
-.container-content .content-header .container-form{
+.container-general .container-content .container-form{
     width: 100%;
+    
 }
-.container-content .content-header .container-form input, select{
-    width: 25%;
+.container-general .container-content .container-form input, select{
+    
     height: 3rem;
     padding: 5px;
-}
 
-.container-content .content-header .container-form button{
+    border: 0.5px solid rgb(219, 215, 215);
+    border-radius: 5px;
+}
+.container-general .container-content .container-form input:placeholder {
+    color: var(--gray-light);
+    font-weight: bold;
+}
+.container-general .container-content .container-form button{
     width: 9rem;
     height: 3rem;
 
+    border-radius: 5px;
     cursor: pointer;
     border: none;
 
@@ -37,42 +46,35 @@
     color: var(--white);
     font-weight: bold;
     font-size: 1.5rem;
-
-    margin-right: 0.8rem;
+    
 }
 
-.container-content .content-header .container-form button:hover{
+.container-general .container-content .container-form button:hover{
     background: var(--green-dark);
 }
 
-.container-content .content-header .container-form form fieldset{
-    width: 100%;
+.container-general .container-content .container-form form fieldset{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    height: 10rem;
+    padding: 0.5rem;
 }
 
 
 
 .container-content .content-main{
     width: 100%;
+    min-height: 27rem;
     display: flex;
     flex-direction: column;
-}
-
-.container-content .content-content{
-    width: 100%;
-    min-height: 40vh;
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.5rem;
 
     border: 1px solid var(--gray-light);
+    margin-top: 2rem;
 }
 
-.container-content .content-content .contant-main-top{
+.container-content .contant-main-top{
     display: flex;
     flex-direction: row;
     min-height: 3rem;
@@ -83,25 +85,33 @@
     font-size: 2rem;
     color: var(--white);
     padding: 0.5rem;
-
-
 }
 
-.footer-pagination h3{
+.container-content .footer-pagination{
+    text-align: center;
+}
+
+.container-content .footer-pagination h4{
+    margin-top: 1rem;
+    color: var(--black);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.container-content .footer-pagination h3{
     margin-top: 2.5rem;
     color: var(--gray-light);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.footer-pagination .pagination{
+.container-content .footer-pagination .pagination{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.footer-pagination .pagination span{
+.container-content .footer-pagination .pagination span{
 
     width: 3rem;
     height: 2rem;
@@ -112,4 +122,29 @@
 
     cursor: pointer;
 
+}
+
+@media(max-width: 910px){
+    .container-general .container-content{
+        width: 80%;
+    }
+    .container-general .container-content .container-form input, select{
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
+    .container-general .container-content .container-form button{
+        width: 100%;
+    }
+
+}
+@media(max-width: 742px){
+    .container-general .container-content .container-form form fieldset{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 415px){
+    .container-general .container-content{
+        width: 90%;
+    }
 }

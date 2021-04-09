@@ -1,9 +1,9 @@
 import baseApi from '../services/api';
 import * as Yup from 'yup';
 
-export async function getExercisesByPagination(page = 1, limit = 5){
+export async function getExercisesByPagination(page = 1, limit = 6){
     const url = `exercises?_sort=date_exercise&_order=desc&_page=${page}&_limit=${limit}`;
-    const maxExercise = await getArrayPagination();
+    const maxExercise = await getArrayPagination(limit);
 
     const res = await baseApi.get(url).then(response => {
         const total = totalHouras(response.data);
@@ -15,6 +15,16 @@ export async function getExercisesByPagination(page = 1, limit = 5){
     return res;
 }
 
+export async function getAllTypesExercises(){
+    const res = await baseApi.get("typeExercise").then(response => {
+        return {status: "success", response: response.data, message: ""};
+    }).catch(error => {
+        return {status: "error", response: error, message: "Erro interno"};
+    });
+
+
+    return res;
+}
 
 export async function deleteExerciseById(idExercise){
     const url = `exercises/${idExercise}`;
@@ -83,11 +93,10 @@ export async function saveExercise(dataExercise){
     return res;
 }
 
-
-async function getArrayPagination(){
+async function getArrayPagination(limit){
     const arrayPagination = [];
     await baseApi.get("exercises").then(response => {
-        for (let i = 1; i <= Math.ceil(response.data.length / 5); i++) {
+        for (let i = 1; i <= Math.ceil(response.data.length / limit); i++) {
             arrayPagination.push(i);
         }
     }).catch(err => {
